@@ -1,12 +1,7 @@
-package com.yulam.myannotation.pojo;
+package com.linna.myannotation.pojo;
 
 import lombok.Data;
 
-/**
- * @author: 5yl
- * email: massyulin@gmail.com
- * time : 2018/1/25 上午9:34
- */
 
 @Data
 public class BeanDefine {

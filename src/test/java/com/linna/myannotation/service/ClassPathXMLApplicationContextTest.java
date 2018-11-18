@@ -1,6 +1,7 @@
-package com.yulam.myannotation.service;
+package com.linna.myannotation.service;
 
-import static org.junit.Assert.*;
+import com.linna.myannotation.service.ClassPathXMLApplicationContext;
+import com.linna.myannotation.service.UserServiceImpl;
 
 public class ClassPathXMLApplicationContextTest {
 

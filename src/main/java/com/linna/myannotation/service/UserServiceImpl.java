@@ -1,15 +1,9 @@
-package com.yulam.myannotation.service;
+package com.linna.myannotation.service;
 
-import com.yulam.myannotation.annotation.ZxfResource;
-import com.yulam.myannotation.dao.User1DaoImpl;
-import com.yulam.myannotation.dao.User2DaoImpl;
-import com.yulam.myannotation.dao.UserDaoImpl;
-
-/**
- * @author: 5yl
- * email: massyulin@gmail.com
- * time : 2018/1/24 下午10:51
- */
+import com.linna.myannotation.annotation.linaResource;
+import com.linna.myannotation.dao.User1DaoImpl;
+import com.linna.myannotation.dao.User2DaoImpl;
+import com.linna.myannotation.dao.UserDaoImpl;
 
 public class UserServiceImpl {
 
@@ -17,17 +11,17 @@ public class UserServiceImpl {
     public User1DaoImpl user1Dao;
 
     // 字段上的注解,可以配置name属性
-    @ZxfResource
+    @linaResource
     public User2DaoImpl user2Dao;
 
     // set方法上的注解，带有name属性
-    @ZxfResource(name = "userDao")
+    @linaResource(name = "userDao")
     public void setUserDao(UserDaoImpl userDao) {
         this.userDao = userDao;
     }
 
     // set方法上的注解，没有配置name属性
-    @ZxfResource
+    @linaResource
     public void setUser1Dao(User1DaoImpl user1Dao) {
         this.user1Dao = user1Dao;
     }

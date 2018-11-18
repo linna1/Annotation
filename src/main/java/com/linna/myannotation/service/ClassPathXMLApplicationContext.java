@@ -1,7 +1,8 @@
-package com.yulam.myannotation.service;
+package com.linna.myannotation.service;
 
-import com.yulam.myannotation.annotation.ZxfResource;
-import com.yulam.myannotation.pojo.BeanDefine;
+import com.linna.myannotation.annotation.linaResource;
+import com.linna.myannotation.pojo.BeanDefine;
+
 import lombok.extern.slf4j.Slf4j;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -14,11 +15,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.*;
 
-/**
- * @author: 5yl
- * email: massyulin@gmail.com
- * time : 2018/1/25 上午9:29
- */
 
 @Slf4j
 public class ClassPathXMLApplicationContext {
@@ -79,8 +75,8 @@ public class ClassPathXMLApplicationContext {
 
     /**
      * 注解处理器
-     * 如果注解ZxfResource配置了name属性，则根据name所指定的名称获取要注入的实例引用，
-     * 如果注解ZxfResource;没有配置name属性，则根据属性所属类型来扫描配置文件获取要
+     * 如果注解linaResource配置了name属性，则根据name所指定的名称获取要注入的实例引用，
+     * 如果注解linaResource;没有配置name属性，则根据属性所属类型来扫描配置文件获取要
      * 注入的实例引用
      *
      */
@@ -107,9 +103,9 @@ public class ClassPathXMLApplicationContext {
                 //获取所有set方法
                 Method setter = proderdesc.getWriteMethod();
                 //判断set方法是否定义了注解
-                if(setter!=null && setter.isAnnotationPresent(ZxfResource.class)){
+                if(setter!=null && setter.isAnnotationPresent(linaResource.class)){
                     //获取当前注解，并判断name属性是否为空
-                    ZxfResource resource = setter.getAnnotation(ZxfResource.class);
+                    linaResource resource = setter.getAnnotation(linaResource.class);
                     String name ="";
                     Object value = null;
                     if(resource.name()!=null&&!"".equals(resource.name())){
@@ -146,8 +142,8 @@ public class ClassPathXMLApplicationContext {
             //获取其全部的字段描述
             Field[] fields = bean.getClass().getFields();
             for(Field f : fields){
-                if(f!=null && f.isAnnotationPresent(ZxfResource.class)){
-                    ZxfResource resource = f.getAnnotation(ZxfResource.class);
+                if(f!=null && f.isAnnotationPresent(linaResource.class)){
+                    linaResource resource = f.getAnnotation(linaResource.class);
                     String name ="";
                     Object value = null;
                     if(resource.name()!=null&&!"".equals(resource.name())){

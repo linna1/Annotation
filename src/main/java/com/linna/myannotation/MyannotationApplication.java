@@ -1,4 +1,4 @@
-package com.yulam.myannotation;
+package com.linna.myannotation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,10 +1,5 @@
-package com.yulam.myannotation.dao;
+package com.linna.myannotation.dao;
 
-/**
- * @author: 5yl
- * email: massyulin@gmail.com
- * time : 2018/1/24 下午10:54
- */
 
 public class User1DaoImpl {
     String name ;
